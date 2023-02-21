@@ -4,14 +4,13 @@ import TodoManager from '../../services/TodoManager';
 
 const Add = (context) => {
 	const { state, setState } = context;
-	const { state: { initialValue, todos }} = context;
+	const { state: { todos }} = context;
 
 	return (
 		<Button
 			onClick={ () => setState({
 				...state,
-				todos: [...todos, { text: initialValue,
-					id: TodoManager.getId(context) }],
+				todos: [...todos, TodoManager.getId(context)],
 				initialValue: '',
 			}) }
 			disabled={ TodoManager.toggleButton(context) }
