@@ -8,6 +8,7 @@ const Add = (context) => {
 
 	return (
 		<Button
+			className="add"
 			onClick={ () => setState({
 				...state,
 				todos: [...todos, TodoManager.getId(context)],

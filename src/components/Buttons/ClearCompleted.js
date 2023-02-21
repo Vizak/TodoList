@@ -6,6 +6,7 @@ const ClearCompleted = (context) => {
 
 	return (
 		<Button
+			className="clear"
 			onClick={ () => setState({
 				...state,
 				todos: todos.filter((todo) => todo.isCompleted !== true),
