@@ -1,9 +1,10 @@
 import { React, useState } from 'react';
 import './App.scss';
 import Button from './components/Buttons/Button';
-import Container from './components/Container';
+import Lists from './components/Lists';
 import Input from './components/Input';
-import ToggleButton from './components/Test';
+import ClearCompleted from './components/Buttons/ClearCompleted';
+import SelectAll from './components/SelectAll';
 
 const todoState = {
 	initialValue: '',
@@ -20,8 +21,9 @@ const App = (context) => {
 		<div className="App">
 			<Input { ...extendedContext }/>
 			<Button { ...extendedContext }/>
-			<Container { ...extendedContext }/>
-			<ToggleButton { ...extendedContext }/>
+			<SelectAll { ...extendedContext }/>
+			<Lists { ...extendedContext }/>
+			<ClearCompleted { ...extendedContext }/>
 		</div>
 	);
 };

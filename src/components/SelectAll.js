@@ -1,20 +1,23 @@
 import { React } from 'react';
-import { CheckBox } from '@mui/icons-material';
+import { Checkbox } from '@mui/material';
+import TodoManager from '../services/TodoManager';
 
 const SelectAll = (context) => {
-	const { state, setState, state: { todos }} = context;
+	const { state, setState } = context;
 
 	return (
-		<CheckBox
-			onClick={ () => setState({
-				...state,
-				todos: todos.filter((todo) => todo.isCompleted === true),
-			}) }
+		<Checkbox
+			checked={ TodoManager.isChecked({ ...context }) }
+			onClick={ ({ target: { checked }}) =>
+				setState({
+					...state,
+					todos: TodoManager
+						.toggleIsSelected({ ...context, checked }),
+				}) }
 			variant="contained"
-			color="error"
 			size="medium"
-		> select All
-		</CheckBox>);
+		/>
+	);
 };
 
 export default SelectAll;

@@ -32,12 +32,26 @@ const toggleCheckBox = (context) => {
 	});
 };
 
+const toggleIsSelected = (context) => {
+	const { state: { todos }, checked } = context;
+
+	return todos.map((todo) => ({ ...todo, isCompleted: checked }));
+};
+
+const isChecked = (context) => {
+	const { state: { todos }} = context;
+
+	return todos.length && todos.every((todo) => todo.isCompleted);
+};
+
 const TodoManager = {
 	toggleButton,
 	getId,
 	removeObject,
 	matchedId,
 	toggleCheckBox,
+	toggleIsSelected,
+	isChecked,
 };
 
 export default TodoManager;
