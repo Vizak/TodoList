@@ -9,7 +9,7 @@ const Edit = (context) => {
 		<Button
 			onClick={ () => setState({
 				...state,
-				todos: TodoManager.matchedId(context),
+				todos: TodoManager.editTodo(context),
 				editedTodo: null,
 				initialValue: '',
 			}) }

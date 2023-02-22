@@ -10,7 +10,7 @@ const Delete = (context) => {
 		<Button
 			onClick={ () => setState({
 				...state,
-				todos: TodoManager.removeObject(context),
+				todos: TodoManager.removeTodo(context),
 			}) }
 			variant="filled"
 		><DeleteOutlinedIcon/>

@@ -1,8 +1,8 @@
 import { rndString } from '@laufire/utils/random';
 
-const toggleButton = ({ state: { initialValue }}) => initialValue === '';
+const hasInput = ({ state: { initialValue }}) => initialValue === '';
 
-const getId = (context) => {
+const addTodo = (context) => {
 	const { state: { initialValue }, config: { maxLen }} = context;
 
 	return {
@@ -12,27 +12,27 @@ const getId = (context) => {
 	};
 };
 
-const removeObject = ({ state: { todos }, data: todo }) =>
+const removeTodo = ({ state: { todos }, data: todo }) =>
 	todos.filter(({ id }) => id !== todo.id);
 
-const matchedId = ({ state: { initialValue, editedTodo, todos }}) =>
+const editTodo = ({ state: { initialValue, editedTodo, todos }}) =>
 	todos.map((todo) => (todo.id === editedTodo.id
 		? { ...todo, text: initialValue }
 		: todo));
 
 const toggleCheckBox = (context) => {
-	const { state: { todos }, data: todo } = context;
+	const { state: { todos }, data } = context;
 
-	return todos.map((data) => {
-		const { isCompleted } = data;
+	return todos.map((todo) => {
+		const { isCompleted } = todo;
 
-		return data.id === todo.id
-			? { ...data, isCompleted: !isCompleted }
-			: data;
+		return todo.id === data.id
+			? { ...todo, isCompleted: !isCompleted }
+			: todo;
 	});
 };
 
-const toggleIsSelected = (context) => {
+const toggleAll = (context) => {
 	const { state: { todos }, checked } = context;
 
 	return todos.map((todo) => ({ ...todo, isCompleted: checked }));
@@ -45,12 +45,12 @@ const isChecked = (context) => {
 };
 
 const TodoManager = {
-	toggleButton,
-	getId,
-	removeObject,
-	matchedId,
+	hasInput,
+	addTodo,
+	removeTodo,
+	editTodo,
 	toggleCheckBox,
-	toggleIsSelected,
+	toggleAll,
 	isChecked,
 };
 

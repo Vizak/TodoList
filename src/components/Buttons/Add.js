@@ -11,10 +11,10 @@ const Add = (context) => {
 			className="add"
 			onClick={ () => setState({
 				...state,
-				todos: [...todos, TodoManager.getId(context)],
+				todos: [...todos, TodoManager.addTodo(context)],
 				initialValue: '',
 			}) }
-			disabled={ TodoManager.toggleButton(context) }
+			disabled={ TodoManager.hasInput(context) }
 			variant="outlined"
 		>
 			ADD

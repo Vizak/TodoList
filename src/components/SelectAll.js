@@ -12,7 +12,7 @@ const SelectAll = (context) => {
 				setState({
 					...state,
 					todos: TodoManager
-						.toggleIsSelected({ ...context, checked }),
+						.toggleAll({ ...context, checked }),
 				}) }
 			variant="contained"
 			size="medium"

@@ -1,4 +1,3 @@
-import { peek } from '@laufire/utils/debug';
 import { Box } from '@mui/material';
 import { React } from 'react';
 
@@ -10,7 +9,7 @@ const Text = (context) => {
 			onClick={ () => setState({
 				...state,
 				initialValue: todo.text,
-				editedTodo: peek(todo),
+				editedTodo: todo,
 			}) }
 		>
 			{todo.text}
