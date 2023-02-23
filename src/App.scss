@@ -17,10 +17,20 @@
 
 .add{
 	display: flex;
+	top: -38px;
+	left:156px;
 	flex-direction: row;
 }
 
 .clear{
 	display:flex;
 	flex-direction: column;
+}
+
+.checkbox {
+	left: 10px;
+}
+
+.tasks {
+	top: 8px;
 }

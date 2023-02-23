@@ -5,11 +5,13 @@ import Lists from './components/Lists';
 import Input from './components/Input';
 import ClearCompleted from './components/Buttons/ClearCompleted';
 import SelectAll from './components/SelectAll';
+import TaskPane from './components/TaskPane';
 
 const todoState = {
 	initialValue: '',
 	todos: [],
 	editedTodo: null,
+	filter: 'all',
 };
 
 const App = (context) => {
@@ -21,6 +23,7 @@ const App = (context) => {
 		<div className="App">
 			<Input { ...extendedContext }/>
 			<Button { ...extendedContext }/>
+			<TaskPane { ...extendedContext }/>
 			<SelectAll { ...extendedContext }/>
 			<Lists { ...extendedContext }/>
 			<ClearCompleted { ...extendedContext }/>

@@ -1,13 +1,13 @@
 import { React } from 'react';
 import { Box } from '@mui/material';
-import { peek } from '@laufire/utils/debug';
 import List from './List';
+import TodoManager from '../services/TodoManager';
 
 const Lists = (context) => {
-	const { state: { todos }} = context;
+	const { state: { filter }} = context;
+	const filteredTodo = TodoManager.filters[filter](context);
 
-	peek(todos);
-	return todos.map((todo, key) =>
+	return filteredTodo.map((todo, key) =>
 
 		<Box key={ key }>
 			<List { ...{ ...context, data: todo } }/>

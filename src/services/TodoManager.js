@@ -44,6 +44,13 @@ const isChecked = (context) => {
 	return todos.length && todos.every((todo) => todo.isCompleted);
 };
 
+const filters = {
+	all: ({ state: { todos }}) => todos,
+	active: ({ state: { todos }}) => todos.filter((todo) => !todo.isCompleted),
+	completed: ({ state: { todos }}) =>
+		todos.filter((todo) => todo.isCompleted),
+};
+
 const TodoManager = {
 	hasInput,
 	addTodo,
@@ -52,6 +59,7 @@ const TodoManager = {
 	toggleCheckBox,
 	toggleAll,
 	isChecked,
+	filters,
 };
 
 export default TodoManager;

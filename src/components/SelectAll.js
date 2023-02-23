@@ -7,6 +7,7 @@ const SelectAll = (context) => {
 
 	return (
 		<Checkbox
+			className="checkbox"
 			checked={ TodoManager.isChecked({ ...context }) }
 			onClick={ ({ target: { checked }}) =>
 				setState({
