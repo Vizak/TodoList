@@ -51,6 +51,9 @@ const filters = {
 		todos.filter((todo) => todo.isCompleted),
 };
 
+const getTasks = ({ config: { taskList, maxLen }}) =>
+	taskList.map((task) => ({ text: task, id: rndString(maxLen) }));
+
 const TodoManager = {
 	hasInput,
 	addTodo,
@@ -60,6 +63,7 @@ const TodoManager = {
 	toggleAll,
 	isChecked,
 	filters,
+	getTasks,
 };
 
 export default TodoManager;

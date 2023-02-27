@@ -32,5 +32,27 @@
 }
 
 .tasks {
-	top: 8px;
+	top: 5px;
+}
+
+.taskContainer {
+	margin-top: 15px;
+width: max-content;
+display: flex;
+border: 3px solid black;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+.content {
+	margin: 2px;
+	display: flex;
+	width: 230px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.align {
+	display: flex;
+	margin: 5px;
 }
