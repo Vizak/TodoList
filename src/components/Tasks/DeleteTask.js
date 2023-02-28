@@ -1,17 +1,17 @@
 import { Button } from '@mui/material';
 import { React } from 'react';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import TaskManager from '../../services/TaskManager';
 
 const DeleteTask = (context) => {
-	const { state, setState, data: task } = context;
-	const { state: { tasks }} = context;
+	const { state, setState } = context;
 
 	return (
 		<Button
 			className="align"
 			onClick={ () => setState({
 				...state,
-				tasks: tasks.filter((ele) => ele.id !== task.id),
+				tasks: TaskManager.removeTask(context),
 			}) }
 			color="error"
 		><DeleteOutlinedIcon/>

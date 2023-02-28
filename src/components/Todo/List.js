@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { React } from 'react';
-import Delete from './Buttons/Delete';
+import Delete from '../Buttons/Delete';
 import CheckBox from './CheckBox';
 import Text from './Text';
 

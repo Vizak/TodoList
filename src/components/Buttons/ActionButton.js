@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import Add from './Add';
 import Edit from './Edit';
 
-const Button = (context) => {
+const ActionButton = (context) => {
 	const { state: { editedTodo }, data: todo } = context;
 
 	return <Box>
@@ -15,4 +15,4 @@ const Button = (context) => {
 	</Box>;
 };
 
-export default Button;
+export default ActionButton;

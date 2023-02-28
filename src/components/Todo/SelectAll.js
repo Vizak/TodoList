@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { Checkbox } from '@mui/material';
-import TodoManager from '../services/TodoManager';
+import TodoManager from '../../services/TodoManager';
 
 const checkBox = (
 	context, setState, state
