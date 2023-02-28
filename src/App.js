@@ -4,17 +4,20 @@ import TaskLists from './components/Tasks/TaskList';
 import Todos from './components/Todo/Todos';
 import TaskManager from './services/TaskManager';
 
-const todoState = (context) => ({
+const todoState = {
 	initialValue: '',
 	todos: [],
 	editedTodo: null,
 	filter: 'all',
-	tasks: TaskManager.getTasks(context),
-});
+	tasks: [],
+};
 
 const App = (context) => {
-	const [state, setState] = useState(todoState(context));
+	const { once } = context;
+	const [state, setState] = useState(todoState);
 	const extendedContext = { ...context, state, setState };
+
+	once(() => TaskManager.autoTaskGenerator(extendedContext));
 
 	return (
 		<div className="App">
