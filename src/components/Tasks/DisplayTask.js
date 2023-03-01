@@ -5,7 +5,7 @@ const DisplayTask = (context) => {
 	const { data: tasks } = context;
 
 	return (
-		<Box style={ { marginTop: '10px' } }>
+		<Box style={ { marginLeft: '10px', width: '33%' } }>
 			{tasks.text}
 		</Box>);
 };

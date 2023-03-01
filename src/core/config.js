@@ -1,5 +1,5 @@
 const config = {
-	maxLen: 5,
+	maxLen: 10,
 	options: ['all', 'active', 'completed'],
 	taskList: ['distance',
 		'service',

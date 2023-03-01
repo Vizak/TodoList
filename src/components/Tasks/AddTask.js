@@ -9,13 +9,14 @@ const AddTask = (context) => {
 
 	return (
 		<Button
-			className="align"
 			onClick={ () => setState({
 				...state,
 				todos: [...todos, task],
 				tasks: TaskManager.removeTask(context),
 			}) }
-			color="error"
+			size="small"
+			variant="contained"
+			color="primary"
 		><AddOutlinedIcon/>
 		</Button>);
 };

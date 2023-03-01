@@ -6,7 +6,7 @@ import Edit from './Edit';
 const ActionButton = (context) => {
 	const { state: { editedTodo }, data: todo } = context;
 
-	return <Box>
+	return <Box className="button">
 		{
 			editedTodo === null
 				? <Add { ...{ ...context, data: todo } }/>

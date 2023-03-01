@@ -8,7 +8,7 @@ import SelectAll from './SelectAll';
 import TaskPane from './TaskPane';
 
 const Todos = (context) =>
-	<Box>
+	<Box className="todoBox">
 		<Input { ...context }/>
 		<ActionButton { ...context }/>
 		<TaskPane { ...context }/>

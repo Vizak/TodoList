@@ -7,14 +7,13 @@ const Edit = (context) => {
 
 	return (
 		<Button
-			className="add"
 			onClick={ () => setState({
 				...state,
 				todos: TodoManager.editTodo(context),
 				editedTodo: null,
 				initialValue: '',
 			}) }
-
+			variant="contained"
 		>Edit
 		</Button>);
 };

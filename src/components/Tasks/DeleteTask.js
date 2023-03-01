@@ -13,6 +13,7 @@ const DeleteTask = (context) => {
 				...state,
 				tasks: TaskManager.removeTask(context),
 			}) }
+			variant="contained"
 			color="error"
 		><DeleteOutlinedIcon/>
 		</Button>);

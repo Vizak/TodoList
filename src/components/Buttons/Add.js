@@ -8,14 +8,13 @@ const Add = (context) => {
 
 	return (
 		<Button
-			className="add"
 			onClick={ () => setState({
 				...state,
 				todos: [...todos, TodoManager.addTodo(context)],
 				initialValue: '',
 			}) }
 			disabled={ TodoManager.hasInput(context) }
-			variant="outlined"
+			variant="contained"
 		>
 			ADD
 		</Button>);
