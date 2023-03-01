@@ -6,6 +6,7 @@ const Text = (context) => {
 
 	return (
 		<Box
+			className="text"
 			onClick={ () => setState({
 				...state,
 				initialValue: todo.text,

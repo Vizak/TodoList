@@ -9,12 +9,15 @@ import TaskPane from './TaskPane';
 
 const Todos = (context) =>
 	<Box className="todoBox">
-		<Input { ...context }/>
-		<ActionButton { ...context }/>
-		<TaskPane { ...context }/>
-		<SelectAll { ...context }/>
-		<Lists { ...context }/>
-		<ClearCompleted { ...context }/>
+		<label className="header">Todo</label>
+		<Box>
+			<Input { ...context }/>
+			<ActionButton { ...context }/>
+			<TaskPane { ...context }/>
+			<SelectAll { ...context }/>
+			<Lists { ...context }/>
+			<ClearCompleted { ...context }/>
+		</Box>
 	</Box>;
 
 export default Todos;

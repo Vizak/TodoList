@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { React } from 'react';
 
-const DisplayTask = (context) => {
+const Task = (context) => {
 	const { data: tasks } = context;
 
 	return (
@@ -10,4 +10,4 @@ const DisplayTask = (context) => {
 		</Box>);
 };
 
-export default DisplayTask;
+export default Task;

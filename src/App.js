@@ -1,8 +1,8 @@
 import { peek } from '@laufire/utils/debug';
 import { React, useState } from 'react';
 import './App.scss';
-import TaskLists from './components/Tasks/TaskList';
-import Todos from './components/Todo/Todos';
+import Tasks from './components/Tasks';
+import Todos from './components/Todos';
 import TaskManager from './services/TaskManager';
 
 const todoState = {
@@ -24,7 +24,7 @@ const App = (context) => {
 	return (
 		<div className="App">
 			<Todos { ...extendedContext }/>
-			<TaskLists { ...extendedContext }/>
+			<Tasks { ...extendedContext }/>
 		</div>
 	);
 };
