@@ -5,7 +5,7 @@ const Task = (context) => {
 	const { data: tasks } = context;
 
 	return (
-		<Box style={ { marginLeft: '10px', width: '33%' } }>
+		<Box className="taskText">
 			{tasks.text}
 		</Box>);
 };

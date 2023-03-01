@@ -14,11 +14,10 @@ const AddTask = (context) => {
 				todos: [...todos, task],
 				tasks: TaskManager.removeTask(context),
 			}) }
-			size="small"
-			variant="contained"
 			color="primary"
-		><AddOutlinedIcon/>
-		</Button>);
+			startIcon={ <AddOutlinedIcon/> }
+		/>
+	);
 };
 
 export default AddTask;

@@ -22,6 +22,7 @@
 	font-weight: bold;
 }
 
+
 .inputBox {
 	display:inline-block;
 	margin-top: 10%;
@@ -39,7 +40,6 @@
 	top: 35px;
 	left: 3%;
 }
-
 
 .container {
 	display:flex;
@@ -69,20 +69,36 @@ top: 17%;
 left: -5%;
 }
 
-.taskContainer {
-margin-top: 25%;
-margin-left: 23%;
-width: max-content;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
+.taskHeader {
+	position: absolute;
+	top:2%;
+	left: 72%;
+	font-size: x-large;
+	font-weight: bold;
 }
 
-.content {
-	margin: 2px;
+.taskContainer {
+	margin-top: 12%;
+	margin-left: 23%;
+	width:80%;
 	display: flex;
-	width: 280px;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
+	flex-direction: column;
+	}
+
+.taskText{
+	position: relative;
+	margin-top:3%;
+	width: 38%;
+	}
+
+.content {
+		margin: 2px;
+		display: flex;
+		width: 40%;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+
+
 

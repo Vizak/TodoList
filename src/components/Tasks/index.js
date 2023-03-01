@@ -8,6 +8,7 @@ const Tasks = (context) => {
 	const { state: { tasks }} = context;
 
 	return <Box className="taskBox">
+		<label className="taskHeader">Task</label>
 		<Box className="taskContainer">
 			{tasks.map((task, key) => <Box key={ key } className="content">
 				<Task { ...{ ...context, data: task } }/>

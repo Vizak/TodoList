@@ -8,15 +8,14 @@ const DeleteTask = (context) => {
 
 	return (
 		<Button
-			className="align"
 			onClick={ () => setState({
 				...state,
 				tasks: TaskManager.removeTask(context),
 			}) }
-			variant="contained"
 			color="error"
-		><DeleteOutlinedIcon/>
-		</Button>);
+			endIcon={ <DeleteOutlinedIcon/> }
+		/>
+	);
 };
 
 export default DeleteTask;
