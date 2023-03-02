@@ -9,6 +9,7 @@ const AddTask = (context) => {
 
 	return (
 		<Button
+			style={ { left: '-48%' } }
 			onClick={ () => setState({
 				...state,
 				todos: [...todos, task],

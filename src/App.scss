@@ -1,5 +1,4 @@
 .App {
-	text-align: center;
 	height:100vh;
 	display: flex;
 }
@@ -21,58 +20,57 @@
 	font-size: x-large;
 	font-weight: bold;
 }
-
+.container {
+	display:flex;
+	margin-top:15%;
+	margin-left: 27%;
+	width:69%;
+	align-items:center;
+}
 
 .inputBox {
-	display:inline-block;
-	margin-top: 10%;
-	border-radius: 3%;
+	position:relative;
+	left: 20px;
 	border: 3px solid black;
 }
 
 .button{
-	margin-top: -5%;
-	margin-left: 47%;
+	margin-left: 5%;
+}
+
+.selectAll {
+	height: 20px;
+	width: 20px;
+}
+
+.lists{
+ display:flex;
+	width:35%;
+	margin-top: 18px;
+	margin-left: 32%;
+	border: 3px solid;
 }
 
 .taskPane {
 	position:relative;
-	top: 35px;
-	left: 3%;
-}
-
-.container {
-	display:flex;
-	position: relative;
-	margin-top:2%;
-	top:50px;
-	margin-left: 35%;
-	width:42%;
-	align-items: center;
-	border: 3px solid black;
-	justify-content: space-between;
+	top: 10px;
+	left: 30%;
 }
 
 .text {
-	display: flex;
-	position: relative;
-	width: 40%;
-}
-
-.checkbox {
-top:4%;
-left: -38%;
+	display:inline-block;
+	margin-left: 40px;
+	width:100px;
 }
 
 .clear {
-top: 17%;
-left: -5%;
+left: 4%;
 }
 
 .taskHeader {
 	position: absolute;
-	top:2%;
-	left: 72%;
+	top:8%;
+	left: 67%;
 	font-size: x-large;
 	font-weight: bold;
 }
@@ -88,6 +86,7 @@ left: -5%;
 .taskText{
 	position: relative;
 	margin-top:3%;
+	left: 28%;
 	width: 38%;
 	}
 
@@ -97,7 +96,6 @@ left: -5%;
 		width: 40%;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		border: 2px solid black;
 	}
 
 

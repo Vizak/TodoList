@@ -9,7 +9,7 @@ const Lists = (context) => {
 
 	return filteredTodo.map((todo, key) =>
 
-		<Box key={ key }>
+		<Box key={ key } className="lists">
 			<List { ...{ ...context, data: todo } }/>
 		</Box>);
 };

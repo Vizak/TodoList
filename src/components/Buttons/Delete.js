@@ -8,6 +8,7 @@ const Delete = (context) => {
 
 	return (
 		<Button
+			sx={ { display: 'inline-block' } }
 			onClick={ () => setState({
 				...state,
 				todos: TodoManager.removeTodo(context),

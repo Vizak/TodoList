@@ -16,8 +16,7 @@ const TaskPane = (context) => {
 					...state,
 					filter: option,
 				}) }
-				variant="contained"
-				color="success"
+				color={ option === 'all' ? 'primary' : 'secondary' }
 			>{option}
 			</Button>
 		</span>);

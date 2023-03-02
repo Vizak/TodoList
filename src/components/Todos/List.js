@@ -7,7 +7,7 @@ import Text from './Text';
 const List = (context) => {
 	const { data: todo } = context;
 
-	return <Box className="container">
+	return <Box>
 		<CheckBox { ...{ ...context, data: todo } }/>
 		<Text { ...{ ...context, data: todo } }/>
 		<Delete { ...{ ...context, data: todo } }/>
