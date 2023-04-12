@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
 import { React } from 'react';
 import Lists from './Lists';
-import TaskPane from './TaskPane';
+import FilterButton from './FilterButton';
 
 const Container = (context) =>
 	<Box>
-		<TaskPane { ...context }/>
+		<FilterButton { ...context }/>
 		<Lists { ...context }/>
 	</Box>;
 

@@ -16,8 +16,9 @@ const AddTask = (context) => {
 				tasks: TaskManager.removeTask(context),
 			}) }
 			color="primary"
-			startIcon={ <AddOutlinedIcon/> }
-		/>
+		>
+			<AddOutlinedIcon/></Button>
+
 	);
 };
 

@@ -13,8 +13,8 @@ const DeleteTask = (context) => {
 				tasks: TaskManager.removeTask(context),
 			}) }
 			color="error"
-			endIcon={ <DeleteOutlinedIcon/> }
-		/>
+		>
+			<DeleteOutlinedIcon/> </Button>
 	);
 };
 

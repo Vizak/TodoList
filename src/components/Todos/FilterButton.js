@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { React } from 'react';
 
-const TaskPane = (context) => {
+const FilterButton = (context) => {
 	const { state, setState, config: { options }} = context;
 	const { todos } = state;
 	const hasTodos = todos.length !== 0;
@@ -22,4 +22,4 @@ const TaskPane = (context) => {
 		</span>);
 };
 
-export default TaskPane;
+export default FilterButton;

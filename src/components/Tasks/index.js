@@ -11,8 +11,8 @@ const Tasks = (context) => {
 		<label className="taskHeader">Task</label>
 		<Box className="taskContainer">
 			{tasks.map((task, key) => <Box key={ key } className="content">
-				<Task { ...{ ...context, data: task } }/>
 				<AddTask { ...{ ...context, data: task } }/>
+				<Task { ...{ ...context, data: task } }/>
 				<DeleteTask { ...{ ...context, data: task } }/></Box>)}
 		</Box>
 	</Box>;

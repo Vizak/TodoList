@@ -1,4 +1,3 @@
-import { peek } from '@laufire/utils/debug';
 import { React, useState } from 'react';
 import './App.scss';
 import Tasks from './components/Tasks';
@@ -18,7 +17,6 @@ const App = (context) => {
 	const [state, setState] = useState(todoState);
 	const extendedContext = { ...context, state, setState };
 
-	peek(extendedContext);
 	once(() => TaskManager.autoTaskGenerator(extendedContext));
 
 	return (
