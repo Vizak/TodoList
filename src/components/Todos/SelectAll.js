@@ -2,31 +2,19 @@ import { React } from 'react';
 import { Checkbox } from '@mui/material';
 import TodoManager from '../../services/TodoManager';
 
-const checkBox = (
-	context, setState, state
-) =>
-
-	<Checkbox
-		class="checkbox"
-		checked={ TodoManager.isChecked({ ...context }) }
-		onClick={ ({ target: { checked }}) => setState({
-			...state,
-			todos: TodoManager
-				.toggleAll({ ...context, checked }),
-		}) }
-		variant="contained"
-		size="medium"
-	/>;
-
 const SelectAll = (context) => {
-	const { state, setState, state: { todos }} = context;
-	const isTicked = todos.some((todo) => todo.isCompleted);
+	const { state, setState } = context;
 
-	return isTicked
-	&&	checkBox(
-		context, setState, state
-	)
-	;
+	return (
+		<Checkbox
+			checked={ TodoManager.isChecked({ ...context }) }
+			onClick={ ({ target: { checked }}) => setState({
+				...state,
+				todos: TodoManager.toggleAll({ ...context, checked }),
+			}) }
+			variant="contained"
+			size="medium"
+		/>);
 };
 
 export default SelectAll;

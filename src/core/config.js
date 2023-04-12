@@ -1,4 +1,5 @@
 const config = {
+	url: 'http://localhost:3500/',
 	maxLen: 10,
 	options: ['all', 'active', 'completed'],
 	taskList: ['distance',

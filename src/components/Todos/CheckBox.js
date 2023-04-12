@@ -7,7 +7,7 @@ const CheckBox = (context) => {
 
 	return (
 		<Checkbox
-			checked={ todo.isCompleted }
+			checked={ todo.completed }
 			onClick={ () => setState({
 				...state,
 				todos: TodoManager

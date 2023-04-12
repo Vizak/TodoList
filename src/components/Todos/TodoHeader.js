@@ -7,8 +7,7 @@ import SelectAll from './SelectAll';
 
 const TodoHeader = (context) =>
 	<Box className="container">
-		<Box className="selectAll">
-			<SelectAll { ...context }/></Box>
+		<SelectAll { ...context }/>
 		<Input { ...context }/>
 		<ActionButton { ...context }/>
 		<ClearCompleted { ...context }/>

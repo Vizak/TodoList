@@ -8,7 +8,7 @@ const addTodo = (context) => {
 	return {
 		id: rndString(maxLen),
 		text: initialValue,
-		isCompleted: false,
+		completed: false,
 	};
 };
 
@@ -24,10 +24,10 @@ const toggleCheckBox = (context) => {
 	const { state: { todos }, data } = context;
 
 	return todos.map((todo) => {
-		const { isCompleted } = todo;
+		const { completed } = todo;
 
 		return todo.id === data.id
-			? { ...todo, isCompleted: !isCompleted }
+			? { ...todo, completed: !completed }
 			: todo;
 	});
 };
@@ -35,20 +35,20 @@ const toggleCheckBox = (context) => {
 const toggleAll = (context) => {
 	const { state: { todos }, checked } = context;
 
-	return todos.map((todo) => ({ ...todo, isCompleted: checked }));
+	return todos.map((todo) => ({ ...todo, completed: checked }));
 };
 
 const isChecked = (context) => {
 	const { state: { todos }} = context;
 
-	return todos.length && todos.every((todo) => todo.isCompleted);
+	return todos.length && todos.every((todo) => todo.completed);
 };
 
 const filters = {
 	all: ({ state: { todos }}) => todos,
-	active: ({ state: { todos }}) => todos.filter((todo) => !todo.isCompleted),
+	active: ({ state: { todos }}) => todos.filter((todo) => !todo.completed),
 	completed: ({ state: { todos }}) =>
-		todos.filter((todo) => todo.isCompleted),
+		todos.filter((todo) => todo.completed),
 };
 
 const TodoManager = {

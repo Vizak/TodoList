@@ -8,7 +8,7 @@ const clear = (
 		className="clear"
 		onClick={ () => setState({
 			...state,
-			todos: todos.filter((todo) => todo.isCompleted !== true),
+			todos: todos.filter((todo) => todo.completed !== true),
 		}) }
 		variant="contained"
 		color="error"
@@ -19,7 +19,7 @@ const clear = (
 const ClearCompleted = (context) => {
 	const { state, setState, state: { todos }} = context;
 
-	const hasCompleted = todos.some((todo) => todo.isCompleted);
+	const hasCompleted = todos.some((todo) => todo.completed);
 
 	return hasCompleted
 		&& clear(

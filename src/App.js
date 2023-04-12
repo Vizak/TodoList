@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import './App.scss';
 import Tasks from './components/Tasks';
 import Todos from './components/Todos';
+import remote from './services/remote';
 import TaskManager from './services/TaskManager';
 
 const todoState = {
@@ -17,7 +18,10 @@ const App = (context) => {
 	const [state, setState] = useState(todoState);
 	const extendedContext = { ...context, state, setState };
 
-	once(() => TaskManager.autoTaskGenerator(extendedContext));
+	once(() => {
+		remote.fetchTodos(extendedContext);
+		TaskManager.autoTaskGenerator(extendedContext);
+	});
 
 	return (
 		<div className="App">
