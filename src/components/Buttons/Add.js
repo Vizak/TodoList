@@ -1,23 +1,15 @@
 import { React } from 'react';
 import { Button } from '@mui/material';
 import TodoManager from '../../services/TodoManager';
+import remote from '../../services/remote';
 
-const Add = (context) => {
-	const { state, setState } = context;
-	const { state: { todos }} = context;
-
-	return (
-		<Button
-			onClick={ () => setState({
-				...state,
-				todos: [...todos, TodoManager.addTodo(context)],
-				initialValue: '',
-			}) }
-			disabled={ TodoManager.hasInput(context) }
-			variant="contained"
-		>
-			ADD
-		</Button>);
-};
+const Add = (context) =>
+	<Button
+		onClick={ () => remote.createTodos(context) }
+		disabled={ TodoManager.hasInput(context) }
+		variant="contained"
+	>
+		ADD
+	</Button>;
 
 export default Add;

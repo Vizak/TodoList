@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { rndString } from '@laufire/utils/random';
 
 const hasInput = ({ state: { initialValue }}) => initialValue === '';
@@ -12,8 +13,11 @@ const addTodo = (context) => {
 	};
 };
 
-const removeTodo = ({ state: { todos }, data: todo }) =>
-	todos.filter(({ id }) => id !== todo.id);
+const removeTodo = (context) => {
+	const { state: { todos }, data: todo } = context;
+
+	return todos.filter(({ id }) => id !== todo.id);
+};
 
 const editTodo = ({ state: { initialValue, editedTodo, todos }}) =>
 	todos.map((todo) => (todo.id === editedTodo.id
@@ -35,6 +39,7 @@ const toggleCheckBox = (context) => {
 const toggleAll = (context) => {
 	const { state: { todos }, checked } = context;
 
+	console.log(checked);
 	return todos.map((todo) => ({ ...todo, completed: checked }));
 };
 

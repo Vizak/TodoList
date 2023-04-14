@@ -1,21 +1,12 @@
 import { React } from 'react';
 import { Button } from '@mui/material';
-import TodoManager from '../../services/TodoManager';
+import remote from '../../services/remote';
 
-const Edit = (context) => {
-	const { state, setState } = context;
-
-	return (
-		<Button
-			onClick={ () => setState({
-				...state,
-				todos: TodoManager.editTodo(context),
-				editedTodo: null,
-				initialValue: '',
-			}) }
-			variant="contained"
-		>Edit
-		</Button>);
-};
+const Edit = (context) =>
+	<Button
+		onClick={ () => remote.editTodos(context) }
+		variant="contained"
+	>Edit
+	</Button>;
 
 export default Edit;

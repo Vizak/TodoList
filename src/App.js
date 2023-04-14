@@ -3,7 +3,7 @@ import './App.scss';
 import Tasks from './components/Tasks';
 import Todos from './components/Todos';
 import remote from './services/remote';
-import TaskManager from './services/TaskManager';
+import remoteTask from './services/remoteTask';
 
 const todoState = {
 	initialValue: '',
@@ -20,7 +20,7 @@ const App = (context) => {
 
 	once(() => {
 		remote.fetchTodos(extendedContext);
-		TaskManager.autoTaskGenerator(extendedContext);
+		remoteTask.fetchTasks(extendedContext);
 	});
 
 	return (

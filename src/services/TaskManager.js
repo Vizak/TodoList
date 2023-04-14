@@ -7,7 +7,7 @@ import { rndString, rndValue } from '@laufire/utils/random';
 // };
 
 const taskName = ({ config: { maxLen }, data: task }) =>
-	({ text: task, id: rndString(maxLen), isCompleted: false });
+	({ text: task, id: rndString(maxLen), completed: false });
 
 const removeTask = (context) => {
 	const { state: { tasks }, data: task } = context;

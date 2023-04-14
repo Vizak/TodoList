@@ -7,7 +7,7 @@ const Input = (context) => {
 
 	return (
 		<TextField
-			class="inputBox"
+			className="inputBox"
 			type="text"
 			onChange={ ({ target: { value }}) => setState({
 				...state,
