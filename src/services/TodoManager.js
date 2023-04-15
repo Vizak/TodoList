@@ -39,14 +39,13 @@ const toggleCheckBox = (context) => {
 const toggleAll = (context) => {
 	const { state: { todos }, checked } = context;
 
-	console.log(checked);
 	return todos.map((todo) => ({ ...todo, completed: checked }));
 };
 
 const isChecked = (context) => {
 	const { state: { todos }} = context;
 
-	return todos.length && todos.every((todo) => todo.completed);
+	return todos.every((todo) => todo.completed);
 };
 
 const filters = {

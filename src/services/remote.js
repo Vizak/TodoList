@@ -1,5 +1,4 @@
 /* eslint-disable no-magic-numbers */
-import { peek } from '@laufire/utils/debug';
 import axios from 'axios';
 import TodoManager from './TodoManager';
 
@@ -12,7 +11,7 @@ const remote = {
 		setState({
 			...state,
 			checkStatus: result.status,
-			todos: peek(result.data),
+			todos: result.data,
 		});
 	},
 
